@@ -25,6 +25,8 @@ const calendar = () => {
   let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
   let monthRet = months[day.getMonth()];
   let dayRet = day.getDate();
+  dayRet = String('0' + dayRet).slice(-2);
+
   let yearRet = day.getFullYear();
 
   return `${monthRet} ${dayRet}, ${yearRet}`
